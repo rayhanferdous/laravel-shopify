@@ -1,10 +1,11 @@
+import "@shopify/polaris/dist/styles.css";
 import { createRoot } from "react-dom/client";
 import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import "../css/app.css";
 import "./bootstrap";
 import Home from "./components/Home";
 import Test from "./components/Test";
-import "../css/app.css";
-
+import { AppProvider, Page, Button } from "@shopify/polaris";
 // Define the routes
 const routers = [
     {
@@ -18,7 +19,13 @@ const routers = [
 ];
 
 // App component that uses the Router and displays the current route
-const App = () => <RouterProvider router={createBrowserRouter(routers)} />;
+const App = () => (
+    <AppProvider>
+        <Page title="Example app">
+            <RouterProvider router={createBrowserRouter(routers)} />;
+        </Page>
+    </AppProvider>
+);
 
 // Create and render the React Router instance
 createRoot(document.getElementById("app")).render(<App />);

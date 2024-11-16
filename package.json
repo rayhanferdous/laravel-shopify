@@ -16,6 +16,9 @@
         "vite": "^5.0"
     },
     "dependencies": {
+        "@shopify/app-bridge-react": "^4.1.5",
+        "@shopify/polaris": "^13.9.1",
+        "@shopify/react-i18n": "^7.13.1",
         "react": "^18.3.1",
         "react-dom": "^18.3.1",
         "react-router-dom": "^6.28.0"
